@@ -21,3 +21,12 @@ Understanding file system is essential for navigating and exploiting systems.
 ## 📝 Summary
 
 File system knowledge helps in managing and locating files efficiently.
+
+
+# File Operations
+
+## ls
+
+### List files and folders
+```bash
+ls

@@ -30,3 +30,11 @@ Used in every Linux task, including hacking environments.
 ## 📝 Summary
 
 Navigation is the foundation of working in Linux.
+
+
+# Terminal Navigation Basics
+
+## Clear Terminal
+
+```bash
+Ctrl + L
