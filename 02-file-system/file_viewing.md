@@ -25,3 +25,76 @@ Used to read logs, configs, or sensitive files.
 ## 📝 Summary
 
 File viewing is important for inspecting system data.
+
+
+# File Viewing Commands
+
+# `head`
+
+## Show first lines of file
+
+```bash
+head file.txt
+```
+
+Default:
+- shows first 10 lines
+
+---
+
+# `tail`
+
+## Show last lines of file
+
+```bash
+tail file.txt
+```
+
+Default:
+- shows last 10 lines
+
+---
+
+# `tail -f`
+
+## Follow live file changes
+
+```bash
+tail -f logfile.log
+```
+
+Used for:
+- monitoring logs in real time
+- debugging
+- watching server activity
+
+`-f` = follow
+
+Press `Ctrl + C` to stop.
+
+---
+
+# `journalctl`
+
+## View system logs
+
+```bash
+journalctl
+```
+
+Used to read logs collected by `systemd`.
+
+Useful for:
+- debugging errors
+- checking crashes
+- viewing boot logs
+
+---
+
+# Important Idea
+
+Linux stores almost everything as files:
+- logs
+- configs
+- devices
+- user information

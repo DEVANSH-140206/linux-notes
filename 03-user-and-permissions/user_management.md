@@ -316,3 +316,232 @@ sudo groupdel infinity_gauntlet
 - groups → manage permissions
 - home directory → user workspace
 - least privilege → give only required access
+
+
+# User Information & Permissions
+
+# `alias`
+
+## Create command shortcuts
+
+```bash
+alias ll='ls -l'
+```
+
+Now typing:
+
+```bash
+ll
+```
+
+runs:
+
+```bash
+ls -l
+```
+
+---
+
+# Why use aliases?
+
+Used to:
+- save time
+- shorten long commands
+- create custom shortcuts
+
+Example:
+
+```bash
+alias update='sudo apt update && sudo apt upgrade'
+```
+
+---
+
+# Temporary vs Permanent
+
+Aliases created in terminal are temporary.
+
+To make permanent:
+- add them to `.bashrc`
+
+---
+
+# `ls -l` File Details
+
+Example:
+
+```bash
+-rwxr-xr-- 1 user group 2048 May 10 file.txt
+```
+
+---
+
+# Permission Breakdown
+
+```text
+-rwxr-xr--
+```
+
+## First Character
+
+- `-` = file
+- `d` = directory
+
+---
+
+## Permission Groups
+
+```text
+rwx r-x r--
+```
+
+Split into:
+- owner/user
+- group
+- others
+
+---
+
+# Permission Letters
+
+- `r` = read
+- `w` = write
+- `x` = execute
+
+---
+
+# Permission Meaning
+
+Example:
+
+```text
+rwx
+```
+
+means:
+- read
+- write
+- execute
+
+Example:
+
+```text
+r-x
+```
+
+means:
+- read
+- execute
+- no write
+
+---
+
+# `chmod`
+
+## Change file permissions
+
+Basic structure:
+
+```bash
+chmod who+/-permissions filename
+```
+
+Example:
+
+```bash
+chmod u+x script.sh
+```
+
+Adds execute permission to user.
+
+---
+
+# Who Values
+
+- `u` = user/owner
+- `g` = group
+- `o` = others
+- `a` = all
+
+---
+
+# Operators
+
+- `+` = add permission
+- `-` = remove permission
+- `=` = set exact permission
+
+---
+
+# Permission Values
+
+- `r` = read
+- `w` = write
+- `x` = execute
+
+---
+
+# Examples
+
+## Add execute permission
+
+```bash
+chmod +x script.sh
+```
+
+## Remove write permission from others
+
+```bash
+chmod o-w file.txt
+```
+
+## Give read/write to user only
+
+```bash
+chmod u=rw file.txt
+```
+
+---
+
+# `/etc/passwd`
+
+## View user account information
+
+```bash
+cat /etc/passwd
+```
+
+Contains user account details.
+
+---
+
+# Example Entry
+
+```text
+root:x:0:0:root:/root:/bin/bash
+```
+
+---
+
+# Field Breakdown
+
+```text
+username:password:UID:GID:comment:home:shell
+```
+
+## Important Fields
+
+- `username` → account name
+- `x` → password stored elsewhere
+- `UID` → user ID
+- `GID` → group ID
+- `home` → home directory
+- `shell` → default shell
+
+---
+
+# Important Notes
+
+- `root` user has UID `0`
+- Normal users usually start from UID `1000`
+- `/bin/bash` means Bash shell is used
