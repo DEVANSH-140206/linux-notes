@@ -29,6 +29,3 @@ These commands help identify the system, OS, and user environment.
 
 Used in cybersecurity for reconnaissance after gaining access.
 
-## 📝 Summary
-
-Helps understand the system you are working on.
